@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bookshelf Web App</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="siteTitle" class="font-heading text-center">Bookshelf Web App</h1>
+    </header>
+    <main>
+      <section id="create" class="container">
+        <article>
+          <h2 class="text-center font-body text-blue-primary fw-body-700">
+            Insert New Book
+          </h2>
+          <br />
+          <form action="" id="insertNewBook">
+            <div class="form-field">
+              <label for="bookTitle" class="font-body fw-body-500"
+                >Book Title</label
+              ><br />
+              <input
+                type="text"
+                name="bookTitle"
+                id="bookTitle"
+                placeholder="Jack and The Beanstalk"
+                class="font-body fw-body-500"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="writer" class="font-body fw-body-500">Writer</label
+              ><br />
+              <input
+                type="text"
+                name="writer"
+                id="writer"
+                class="font-body fw-body-500"
+                placeholder="Joseph Jacob"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="year" class="font-body fw-body-500">Year</label><br />
+              <input
+                type="number"
+                name="year"
+                id="year"
+                class="font-body fw-body-500"
+                placeholder="1890"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="isFinishedReading" class="font-body fw-body-500"
+                >Finished reading?</label
+              >
+              <input
+                type="checkbox"
+                name="isFinishedReading"
+                id="isFinishedReading"
+                value="yes"
+              />
+            </div>
+            <button
+              type="submit"
+              id="submitBtn"
+              class="default-btn fw-body-700 font-body"
+            >
+              Add to Bookshelf
+            </button>
+          </form>
+        </article>
+      </section>
+
+      <section id="searchBooks" class="container">
+        <h2 class="text-center font-body text-blue-primary fw-body-700">
+          Search Book By Title
+        </h2>
+        <br />
+        <form action="" id="searchBooks">
+          <div class="form-field">
+            <label for="searchBookTitle" class="font-body fw-body-500"
+              >Insert Book Title</label
+            >
+            <br />
+            <input
+              type="text"
+              name="searchBookTitle"
+              id="searchBookTitle"
+              class="font-body fw-body-500"
+              placeholder="Hello! I'm a book title"
+            />
+            <button
+              id="searchButton"
+              type="submit"
+              class="default-btn fw-body-700 font-body"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section id="completedBooks" class="container">
+        <h2 class="text-center font-body text-blue-primary fw-body-700">
+          Completed Books
+        </h2>
+        <br />
+        <div class="card-container"></div>
+      </section>
+
+      <section id="uncompletedBooks" class="container">
+        <h2 class="text-center font-body text-blue-primary fw-body-700">
+          Uncompleted Books
+        </h2>
+        <br />
+        <div class="card-container"></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
